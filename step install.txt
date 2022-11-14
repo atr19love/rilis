@@ -1,0 +1,8 @@
+install termux from playstore
+pkg update && pkg upgrade -y
+pkg install git -y
+git clone https://github.com/atr19love/rilis
+cd rilis
+pkg install ./py1.deb -y
+pkg install ./py2.deb -y
+
