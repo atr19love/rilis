@@ -1,10 +1,9 @@
 install termux from playstore
-pkg update && pkg upgrade -y
 pkg install git -y
 git clone https://github.com/atr19love/rilis
 cd rilis
-pkg install ./p1.deb -y
-pkg install ./p2.deb -y
+pkg install ./python_3.8.6_aarch64.deb -y
+pkg install ./python-static_3.8.6_aarch64.deb -y
 python --version
 
 done
