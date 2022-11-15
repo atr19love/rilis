@@ -1,16 +1,8 @@
 install termux from F-Droid (NOT PLAYSTORE)
-pkg update && pkg upgrade -y
-pkg install git -y
-pkg install wget -y
+apt update && upgrade -y
+apt install git -y
 git clone https://github.com/atr19love/rilis
 cd rilis
-pkg install ./tsb1.deb -y
-pkg install ./tsb2.deb -y
+apt install ./tsb1.deb -y
+apt install ./tsb2.deb -y
 
-uname -m
-
-aarch64 = wget https://github.com/Termux-pod/termux-pod/blob/main/aarch64/python/python-3.8.6/python_3.8.6_aarch64.deb
-aarch64 = wget https://github.com/Termux-pod/termux-pod/blob/main/aarch64/python/python-3.8.6/python-static_3.8.6_aarch64.deb
-
-dpkg -i python_3.8.6_aarch64.deb
-dpkg -i python-static_3.8.6_aarch64.deb
