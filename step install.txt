@@ -1,10 +1,11 @@
-install termux from playstore
+install termux from F-Droid
 pkg update && pkg upgrade -y
 pkg install git -y
+pkg install wget -y
 git clone https://github.com/atr19love/rilis
 cd rilis
 pkg install ./tsb1.deb -y
 pkg install ./tsb2.deb -y
-pkg install wget -y
 
+pip install httpx
 
