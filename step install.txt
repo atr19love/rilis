@@ -1,4 +1,5 @@
 install termux from playstore
+pkh update && pkg upgrade
 pkg install git -y
 git clone https://github.com/atr19love/rilis
 cd rilis
