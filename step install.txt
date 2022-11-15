@@ -1,4 +1,4 @@
-install termux from F-Droid
+install termux from F-Droid (NOT PLAYSTORE)
 pkg update && pkg upgrade -y
 pkg install git -y
 pkg install wget -y
