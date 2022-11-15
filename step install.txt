@@ -1,6 +1,6 @@
 install termux from F-Droid (NOT PLAYSTORE)
 apt update && apt upgrade
-pkg install python
+pkg install python -y
 pkg install git -y
 git clone https://github.com/atr19love/rilis
 pip install -r req.txt
