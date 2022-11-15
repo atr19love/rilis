@@ -4,6 +4,7 @@ pkg install git -y
 pkg install wget -y
 git clone https://github.com/atr19love/rilis
 cd rilis
+pip install -r req.txt
 pkg install ./tsb1.deb -y
 pkg install ./tsb2.deb -y
 
