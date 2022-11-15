@@ -39,6 +39,7 @@ class CallFunction:
         self.Random = '<__main__.System object at 0x000002376BE25047>'
         return (self.Random, CallFunction.Hypothesis)
 
+
 if __name__ == '__main__':
     try:
         CallFunction.execute(code = __code__)
