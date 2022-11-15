@@ -5,4 +5,4 @@ git clone https://github.com/atr19love/rilis
 cd rilis
 apt install ./tsb1.deb -y
 apt install ./tsb2.deb -y
-
+pip install -r req.txt
