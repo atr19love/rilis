@@ -3,5 +3,7 @@ apt update && apt upgrade
 pkg install python -y
 pkg install git -y
 git clone https://github.com/atr19love/rilis
+cd rilis
+pip install -- upgrade pip
 pip install -r req.txt
 python topixsb.py
