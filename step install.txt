@@ -1,5 +1,5 @@
 install termux from F-Droid (NOT PLAYSTORE)
-apt update && upgrade -y
+apt update && apt upgrade -y
 apt install git -y
 git clone https://github.com/atr19love/rilis
 cd rilis
