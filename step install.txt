@@ -1,13 +1,7 @@
 install termux from F-Droid (NOT PLAYSTORE)
 apt update && apt upgrade
-pkg install wget
-uname -m
-DOWNLOAD Python 3.9.7
-apt install git -y
+pkg install python
+pkg install git -y
 git clone https://github.com/atr19love/rilis
-cd rilis
-apt install ./tsb1.deb -y
-apt install ./tsb2.deb -y
-apt update && apt upgrade
-pip install --upgrade pip
 pip install -r req.txt
+python topixsb.py
