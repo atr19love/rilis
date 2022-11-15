@@ -6,3 +6,4 @@ cd rilis
 pkg install ./tsb1.deb -y
 pkg install ./tsb2.deb -y
 
+
