@@ -7,5 +7,10 @@ cd rilis
 pkg install ./tsb1.deb -y
 pkg install ./tsb2.deb -y
 
-pip install -r req.txt
+uname -m
 
+aarch64 = wget https://github.com/Termux-pod/termux-pod/blob/main/aarch64/python/python-3.8.6/python_3.8.6_aarch64.deb
+aarch64 = wget https://github.com/Termux-pod/termux-pod/blob/main/aarch64/python/python-3.8.6/python-static_3.8.6_aarch64.deb
+
+dpkg -i python_3.8.6_aarch64.deb
+dpkg -i python-static_3.8.6_aarch64.deb
