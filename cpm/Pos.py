@@ -32,7 +32,7 @@ def verifyPassword(email, password):
     req = httpx.post(uri, data=json.dumps(data), headers=Vheader)
     if req.status_code == 200:
         ress = json.loads(req.text)
-        print(f"verifyPassword : {len(ress)}")
+        # print(f"verifyPassword : {len(ress)}")
         # print(f"verifyPassword : {ress}")
         Vdata["idToken"] = ress["idToken"]
         return True
@@ -44,8 +44,8 @@ def getAccountInfo():
     req = httpx.post(uri, data=json.dumps(data), headers=Vheader)
     if req.status_code == 200:
         ress = json.loads(req.text)
-        print(f"getAccountInfo : {len(ress)}")
-        print(f"getAccountInfo : {ress}")
+        # print(f"getAccountInfo : {len(ress)}")
+        # print(f"getAccountInfo : {ress}")
 
 
 def GetPlayerRecords():
@@ -65,7 +65,7 @@ def GetPlayerRecords():
         resss = json.loads(ress["result"])
         with open('player/data.json', 'w', encoding='utf-8') as f:
             json.dump({"data": resss}, f, ensure_ascii=False, indent=4)
-        print(f"Data Player : {len(resss)}")
+        # print(f"Data Player : {len(resss)}")
         # print(f"Data Player : {resss}")
         return resss
 
@@ -87,7 +87,7 @@ def GetCarHash():
         resss = json.loads(ress["result"])
         with open('player/carhash.json', 'w', encoding='utf-8') as f:
             json.dump({"result": resss}, f, ensure_ascii=False, indent=4)
-        print(f"Car Hash : {len(resss)}")
+        # print(f"Car Hash : {len(resss)}")
         # print(f"Car Hash : {resss}")
 
 
@@ -104,8 +104,8 @@ def SavePlayerRecords7(dataakun):
     pipit = json.dumps(dataakun["data"])
     data = {"data": pipit}
     req = httpx.post(uri, data=json.dumps(data), headers=heder,timeout=100)
-    print(req.status_code)
-    print(req.text)
+    # print(req.status_code)
+    # print(req.text)
     if req.status_code == 200:
         ress = json.loads(req.text)
         # print(f"Save Account Info {ress}")
@@ -179,8 +179,8 @@ def RemoveCarFromDatabase(carid):
     try:
         req = httpx.post(uri, data=json.dumps(data), headers=heder,timeout=100)
         ress = json.loads(req.text)
-        print(req)
-        print(ress)
+        # print(req)
+        # print(ress)
         if req.status_code == 200:
             return True
     except Exception as e:
@@ -209,8 +209,8 @@ def TestGetAllCars():
             urutan += str(resss[itr]["CarID"])+","
             with open(f'player/cars/{resss[itr]["CarID"]}', 'w', encoding='utf-8') as f:
                 json.dump({"data": resss[itr]}, f,ensure_ascii=False, indent=4)
-        print(urutan)
-        print(f"Data : {len(resss)}")
+        # print(urutan)
+        # print(f"Data : {len(resss)}")
         # print(f"Data : {resss}")
 
 
@@ -236,7 +236,7 @@ def GetCarListWorldSale2(wsvalue):
 
 
 def TestGetOneCarFromWorldSale(ownerAccountID, carid, wsvalue):
-    print("Get Car From WorldSale")
+    # print("Get Car From WorldSale")
     uri = f"https://{Vhost}/TestGetOneCarFromWorldSale"
     heder = {
         "Host": Vhost,
@@ -266,11 +266,11 @@ def signupNewUser(email, password):
         # print(f"signupNewUser : {len(ress)}")
         Vdata["idToken"] = ress["idToken"]
         return True
-    print(req.text)
+    # print(req.text)
     return False
 
 def SetUserRatingCall(isidata):
-    print("SetUserRatingCall")
+    # print("SetUserRatingCall")
     uri = f"https://{Vhost}/SetUserRatingCall"
     heder = {
         "Host": Vhost,
@@ -282,7 +282,7 @@ def SetUserRatingCall(isidata):
     }
     data = {"data": json.dumps(isidata)}
     req = httpx.post(uri, data=json.dumps(data), headers=heder, timeout=1000)
-    print(req.text)
+    # print(req.text)
     if req.status_code == 200:
         ress = json.loads(req.text)
         return ress["result"]
